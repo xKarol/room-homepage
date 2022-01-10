@@ -12,24 +12,16 @@ export default function Nav({ active }) {
       >
         <ul className="flex space-x-[25px] lowercase">
           <Link href="/">
-            <a className="relative after:pointer-events-none after:transition-opacity after:opacity-0 hover:after:opacity-100 after:absolute after:-bottom-[5px] after:left-0 after:right-0 after:h-[3px] after:bg-white">
-              Home
-            </a>
+            <a className="underlineStroke">Home</a>
           </Link>
           <Link href="/">
-            <a className="relative after:pointer-events-none after:transition-opacity after:opacity-0 hover:after:opacity-100 after:absolute after:-bottom-[5px] after:left-0 after:right-0 after:h-[3px] after:bg-white">
-              Shop
-            </a>
+            <a className="underlineStroke">Shop</a>
           </Link>
           <Link href="/">
-            <a className="relative after:pointer-events-none after:transition-opacity after:opacity-0 hover:after:opacity-100 after:absolute after:-bottom-[5px] after:left-0 after:right-0 after:h-[3px] after:bg-white">
-              About
-            </a>
+            <a className="underlineStroke">About</a>
           </Link>
           <Link href="/">
-            <a className="relative after:pointer-events-none after:transition-opacity after:opacity-0 hover:after:opacity-100 after:absolute after:-bottom-[5px] after:left-0 after:right-0 after:h-[3px] after:bg-white">
-              Contact
-            </a>
+            <a className="underlineStroke">Contact</a>
           </Link>
         </ul>
       </nav>

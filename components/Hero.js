@@ -23,7 +23,7 @@ export default function Hero() {
             our collection and make your property a reflection of you and what
             you love.
           </p>
-          <button className="uppercase font-semibold tracking-[10px] mt-5 md:mt-none flex items-center space-x-10">
+          <button className="transition-opacity hover:opacity-50 uppercase font-semibold tracking-[10px] mt-5 md:mt-none flex items-center space-x-10">
             <p>Shop Now</p>
             <CgArrowLongRight className="text-xl" />
           </button>
