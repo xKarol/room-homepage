@@ -1,14 +1,8 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import Photo from "../components/Photo";
 import About from "../components/About";
 import Hero from "../components/Hero";
-import Hero1 from "../assets/images/desktop-image-hero-1.jpg";
-import Hero2 from "../assets/images/desktop-image-hero-2.jpg";
-import Hero3 from "../assets/images/desktop-image-hero-3.jpg";
-import AboutImg from "../assets/images/image-about-dark.jpg";
-import AboutLightImg from "../assets/images/image-about-light.jpg";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+
 export default function Home() {
   return (
     <>
@@ -18,20 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Photo src={Hero1} className={"w-full h-[400px]"} alt="room photo">
-        <div className="absolute right-0 bottom-0 bg-black h-[50px] w-[100px] flex space-x-5 text-veryDarkGray text-xl items-center justify-center">
-          <BsChevronLeft />
-          <BsChevronRight />
-        </div>
-      </Photo>
       <Hero />
-      <Photo src={AboutImg} className={"w-full h-[250px]"} alt="room photo" />
       <About />
-      <Photo
-        src={AboutLightImg}
-        className={"w-full h-[300px]"}
-        alt="room photo"
-      />
     </>
   );
 }
