@@ -5,7 +5,7 @@ import LogoSrc from "../assets/svg/logo.svg";
 export default function Logo({ className }) {
   return (
     <Link href="/">
-      <a className={`relative ${className}`}>
+      <a className={`relative ${className} select-none`}>
         <Image
           src={LogoSrc}
           alt="room homepage"

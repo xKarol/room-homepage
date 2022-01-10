@@ -4,7 +4,7 @@ import AboutLightImg from "../assets/images/image-about-light.jpg";
 
 export default function About() {
   return (
-    <section className="h-[800px] md:h-[250px] w-full flex flex-col md:flex-row">
+    <section className="h-[900px] md:h-[250px] w-full flex flex-col md:flex-row">
       <div className="flex-1 w-full h-full">
         <Photo src={AboutImg} className={"w-full h-full"} alt="room photo" />
       </div>

@@ -11,7 +11,7 @@ export default function Header() {
       if (!open) return;
       setOpen(false);
     };
-    document.body.style.overflow = `${open ? "hidden" : "scroll"}`;
+    document.body.style.overflowX = `${open ? "hidden" : "visible"}`;
     if (open) window.scrollTo(0, 0);
     document.addEventListener("click", handleClick);
     return () => {
@@ -20,10 +20,14 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="w-full flex px-5 absolute top-10 z-50">
+    <header className="w-full flex px-5 absolute top-10 z-50 items-center">
       <Hamburger active={open} onClick={() => setOpen(!open)} />
-      <div className={"flex absolute left-1/2 -translate-x-1/2"}>
-        <Logo className={"w-[80px] h-[15px] left-1/2 -translate-x-1/2"} />
+      <div
+        className={`flex absolute md:static md:left-0 md:translate-x-0 left-1/2 -translate-x-1/2 ${
+          open && "hidden"
+        }`}
+      >
+        <Logo className={"w-[80px] h-[15px]"} />
       </div>
       <Nav active={open} />
     </header>

@@ -1,17 +1,14 @@
 import { CgArrowLongRight } from "react-icons/cg";
 import Photo from "./Photo";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import Switcher from "./Switcher";
 import Hero1 from "../assets/images/desktop-image-hero-1.jpg";
 
 export default function Hero() {
   return (
-    <section className="h-[500px] w-full flex flex-col md:flex-row">
+    <section className="h-[700px] md:h-[500px] w-full flex flex-col md:flex-row">
       <div className="md:flex-[2] w-full h-full">
         <Photo src={Hero1} className={"w-full h-full"} alt="room photo">
-          <div className="absolute right-0 bottom-0 bg-black h-[50px] w-[100px] md:-right-[100px] flex space-x-5 text-veryDarkGray text-xl items-center justify-center">
-            <BsChevronLeft />
-            <BsChevronRight />
-          </div>
+          <Switcher />
         </Photo>
       </div>
       <section className="p-10 flex justify-center items-center md:flex-1">

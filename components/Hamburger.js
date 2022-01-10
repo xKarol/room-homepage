@@ -1,7 +1,7 @@
 export default function Hamburger({ active, onClick }) {
   return (
     <div
-      className="flex flex-col justify-center items-center space-y-1 z-50"
+      className="md:hidden flex flex-col justify-center items-center space-y-1 z-50 cursor-pointer"
       onClick={onClick}
     >
       <span
