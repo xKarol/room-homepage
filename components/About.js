@@ -8,7 +8,7 @@ export default function About() {
       <div className="flex-1 w-full h-full">
         <Photo src={AboutImg} className={"w-full h-full"} alt="room photo" />
       </div>
-      <section className="p-10 flex items-center justify-center flex-[1.25]">
+      <section className="p-10 flex items-center justify-center md:flex-[1.25]">
         <div className="space-y-3">
           <h1 className="uppercase font-bold text-[14px]">
             About our furniture
