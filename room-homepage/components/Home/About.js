@@ -1,6 +1,6 @@
-import AboutImg from "../assets/images/image-about-dark.jpg";
-import Photo from "./Photo";
-import AboutLightImg from "../assets/images/image-about-light.jpg";
+import AboutImg from "../../assets/images/image-about-dark.jpg";
+import Photo from "../Photo";
+import AboutLightImg from "../../assets/images/image-about-light.jpg";
 
 export default function About() {
   return (
