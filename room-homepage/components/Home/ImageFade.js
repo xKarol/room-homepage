@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Photo from "../Photo";
-import Switcher from "../Switcher";
+import Switcher from "./Switcher";
 import HeroContext from "../../context/HeroContext";
 
 export default function ImageFade() {
