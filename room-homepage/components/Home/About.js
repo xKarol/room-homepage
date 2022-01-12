@@ -6,17 +6,17 @@ export default function About() {
   const { aboutData } = useContext(AboutContext);
 
   return (
-    <section className="h-[900px] md:h-[250px] w-full flex flex-col md:flex-row">
+    <article className="h-[900px] md:h-[250px] w-full flex flex-col md:flex-row overflow-hidden">
       {aboutData?.attributes?.image && (
-        <div className="flex-1 w-full h-full">
+        <section className="flex-1 w-full h-full">
           <Photo
             src={aboutData?.attributes?.image}
             className={"w-full h-full"}
-            alt="room photo"
+            alt="black chairs"
           />
-        </div>
+        </section>
       )}
-      <section className="p-10 flex items-center justify-center md:flex-[1.25]">
+      <section className="p-10 md:px-10 md:py-0 flex items-center justify-center md:flex-[1.25]">
         <div className="space-y-3">
           <h1 className="uppercase font-bold text-[14px]">
             {aboutData?.attributes?.title}
@@ -25,14 +25,14 @@ export default function About() {
         </div>
       </section>
       {aboutData?.attributes?.secondImage && (
-        <div className="flex-1">
+        <section className="flex-1">
           <Photo
             src={aboutData?.attributes?.secondImage}
             className={"w-full h-full"}
-            alt="room photo"
+            alt="white chair"
           />
-        </div>
+        </section>
       )}
-    </section>
+    </article>
   );
 }

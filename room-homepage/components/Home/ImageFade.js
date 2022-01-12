@@ -6,7 +6,7 @@ import HeroContext from "../../context/HeroContext";
 export default function ImageFade() {
   const { heroData, heroId } = useContext(HeroContext);
   return (
-    <div className="md:flex-[2] w-full h-full relative">
+    <div className="md:flex-[1.7] w-full h-[350px] md:h-[450px] relative">
       {heroData.map((element, index) => (
         <div
           key={element?.id}

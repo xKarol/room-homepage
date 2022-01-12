@@ -22,7 +22,7 @@ export default function Switcher() {
   }, [heroId]); //dependency to reset timer
 
   return (
-    <div className="absolute right-0 bottom-0 h-[50px] md:-right-[100px] flex text-white text-xl items-center justify-center">
+    <div className="z-50 absolute right-0 bottom-0 h-[50px] md:-right-[100px] flex text-white text-xl items-center justify-center">
       <button
         className="flex justify-center items-center cursor-pointer transition-colors bg-black h-full w-[50px] hover:opacity-75"
         onClick={handlePrevHero}

@@ -7,11 +7,11 @@ export default function Hero() {
   const { heroData, heroId } = useContext(HeroContext);
 
   return (
-    <section className="h-[700px] md:h-[500px] w-full flex flex-col md:flex-row">
+    <article className="w-full flex flex-col md:flex-row overflow-hidden">
       <ImageFade />
-      <section className="p-10 flex justify-center items-center md:flex-1 pointer-events-none">
+      <section className="p-10 md:px-[80px] md:py-0 flex justify-center items-center md:flex-1">
         <div>
-          <h1 className="text-2xl font-bold text-[14px] tracking-tighter mb-3">
+          <h1 className="text-[28px] leading-[1] font-bold tracking-tighter mb-5">
             {heroData[heroId]?.attributes?.title}
           </h1>
           <p className="text-darkGray">
@@ -23,6 +23,6 @@ export default function Hero() {
           </button>
         </div>
       </section>
-    </section>
+    </article>
   );
 }
