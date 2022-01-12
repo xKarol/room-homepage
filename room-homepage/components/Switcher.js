@@ -14,7 +14,7 @@ export default function Switcher() {
     if (heroId <= 0) setHeroId(data?.length - 1);
     else setHeroId(heroId - 1);
   };
-  
+
   return (
     <div className="absolute right-0 bottom-0 h-[50px] md:-right-[100px] flex text-white text-xl items-center justify-center">
       <button
