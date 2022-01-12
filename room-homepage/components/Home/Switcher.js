@@ -3,16 +3,16 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import HeroContext from "../../context/HeroContext";
 
 export default function Switcher() {
-  const { data, heroId, setHeroId } = useContext(HeroContext);
+  const { heroData, heroId, setHeroId } = useContext(HeroContext);
   const nextBtnRef = useRef(null);
 
   const handleNextHero = () => {
-    if (heroId >= data?.length - 1) setHeroId(0);
+    if (heroId >= heroData?.length - 1) setHeroId(0);
     else setHeroId(heroId + 1);
   };
 
   const handlePrevHero = () => {
-    if (heroId <= 0) setHeroId(data?.length - 1);
+    if (heroId <= 0) setHeroId(heroData?.length - 1);
     else setHeroId(heroId - 1);
   };
 

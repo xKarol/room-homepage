@@ -1,35 +1,38 @@
-import AboutImg from "../../assets/images/image-about-dark.jpg";
+import { useContext } from "react";
 import Photo from "../Photo";
-import AboutLightImg from "../../assets/images/image-about-light.jpg";
+import AboutContext from "../../context/AboutContext";
 
 export default function About() {
+  const { aboutData } = useContext(AboutContext);
+
   return (
     <section className="h-[900px] md:h-[250px] w-full flex flex-col md:flex-row">
-      <div className="flex-1 w-full h-full">
-        <Photo src={AboutImg} className={"w-full h-full"} alt="room photo" />
-      </div>
+      {aboutData?.attributes?.image && (
+        <div className="flex-1 w-full h-full">
+          <Photo
+            src={aboutData?.attributes?.image}
+            className={"w-full h-full"}
+            alt="room photo"
+          />
+        </div>
+      )}
       <section className="p-10 flex items-center justify-center md:flex-[1.25]">
         <div className="space-y-3">
           <h1 className="uppercase font-bold text-[14px]">
-            About our furniture
+            {aboutData?.attributes?.title}
           </h1>
-          <p className="text-darkGray">
-            Our multifunctional collection blends design and function to suit
-            your individual taste. Make each room unique, or pick a cohesive
-            theme that best express your interests and what inspires you. Find
-            the furniture pieces you need, from traditional to contemporary
-            styles or anything in between. Product specialists are available to
-            help you create your dream space.
-          </p>
+          <p className="text-darkGray">{aboutData?.attributes?.description}</p>
         </div>
       </section>
-      <div className="flex-1">
-        <Photo
-          src={AboutLightImg}
-          className={"w-full h-full"}
-          alt="room photo"
-        />
-      </div>
+      {aboutData?.attributes?.secondImage && (
+        <div className="flex-1">
+          <Photo
+            src={aboutData?.attributes?.secondImage}
+            className={"w-full h-full"}
+            alt="room photo"
+          />
+        </div>
+      )}
     </section>
   );
 }
