@@ -1,6 +1,6 @@
 export default function Hamburger({ active, onClick }) {
   return (
-    <div
+    <button
       className="md:hidden flex flex-col justify-center items-center space-y-1 z-50 cursor-pointer"
       onClick={onClick}
     >
@@ -19,6 +19,6 @@ export default function Hamburger({ active, onClick }) {
           active && "bg-darkGray -rotate-45"
         }`}
       />
-    </div>
+    </button>
   );
 }

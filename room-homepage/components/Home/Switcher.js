@@ -26,6 +26,7 @@ export default function Switcher() {
       <button
         className="flex justify-center items-center cursor-pointer transition-colors bg-black h-full w-[50px] hover:opacity-75"
         onClick={handlePrevHero}
+        aria-label="previous image"
       >
         <BsChevronLeft />
       </button>
@@ -33,6 +34,7 @@ export default function Switcher() {
         className="flex justify-center items-center cursor-pointer transition-colors bg-black h-full w-[50px] hover:opacity-75"
         onClick={handleNextHero}
         ref={nextBtnRef}
+        aria-label="next image"
       >
         <BsChevronRight />
       </button>
