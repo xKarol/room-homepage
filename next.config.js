@@ -3,4 +3,7 @@ module.exports = {
   images: {
     domains: ["localhost"],
   },
+  env: {
+    BACKEND_URL: process.env.BACKEND_URL,
+  },
 };
