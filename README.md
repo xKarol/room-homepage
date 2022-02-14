@@ -1,34 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<center>
+<br/>
+<h1>Room homepage</h1>
+<br/>
+</center>
+<h2 style="display: inline-block">Table of Contents</h2>
+<ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#links">Links</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#screens">Screens</a></li>
+</ol>
 
-## Getting Started
+## About the Project
+The page is statically generated. This project was created using Strapi CMS. 
 
-First, run the development server:
+## Built With
+* <a href="https://nextjs.org/">Next JS</a>
+* <a href="https://tailwindcss.com/">Tailwind CSS</a>
+* <a href="https://strapi.io/">Strapi CMS</a>
+* <a href="https://react-icons.github.io/react-icons/">React Icons</a>
 
-```bash
-npm run dev
-# or
-yarn dev
+## Links 
+- Project URL: -
+- Challenge URL: https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq
+
+## Installation
+1. Make sure you have installed Node. You can download it from [here](https://nodejs.org/en/).
+2. Open console ([Help](#usage))
+3. Change directory
+
+`cd desktop`
+
+4. Clone the repo
+
+`git clone https://github.com/xKarol/room-homepage.git`
+
+5. Change directory
+
+`cd room-homepage`
+
+6. Install NPM packages
+
+`npm install`
+
+7. Create environment variables file
+
+`type nul > .env.local`
+
+8. Open project in code editor
+
+`code .`
+
+9. Open **.env.local** file
+10. Paste this into .env.local file
+
+```
+BACKEND_URL=http:localhost:1337
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+11. Change directory
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`cd room-homepage-strapi`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+12. Install NPM packages
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`npm install`
 
-## Learn More
+13. Run strapi
 
-To learn more about Next.js, take a look at the following resources:
+`npm run develop`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+14. Change the page content using the strapi admin panel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
+1. Open console
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+1. Press Win + R
+2. Type "cmd"
+```
+2. Change directory
+
+```cd desktop/room-homepage/room-homepage-strapi```
+
+3. Run Strapi
+
+```npm run develop```
+
+4. Open new console and change directory
+
+`cd desktop/room-homepage`
+
+5. Run app
+
+`npm run dev`
+
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Screens
+<details open="open">
+  <summary><h4 style="display: inline-block">Mobile</h2></summary>
+  
+
+![FireShot Capture 034 - Room homepage - localhost](https://user-images.githubusercontent.com/83913433/153911178-69dba235-fd43-4a8a-b4c6-fdb030b18f36.png)
+<br />
+![FireShot Capture 035 - Room homepage - localhost](https://user-images.githubusercontent.com/83913433/153911210-32fb992e-838a-43b2-9e3c-66dfa74dfd1b.png)
+
+</details>
+
+<details open="open">
+  <summary><h4 style="display: inline-block">Desktop</h2></summary>
+  
+![FireShot Capture 033 - Room homepage - localhost](https://user-images.githubusercontent.com/83913433/153911144-da066917-9745-4325-b169-d1e9ccd7e1c2.png)
+
+</details>
