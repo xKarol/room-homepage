@@ -7,10 +7,12 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleClick = () => {
+    const handleClick = (e) => {
+      if (e.target.id === "header-nav") return;
       if (!open) return;
       setOpen(false);
     };
+    
     document.body.style.overflow = `${open ? "hidden" : "visible"}`;
     if (open) window.scrollTo(0, 0);
     document.addEventListener("click", handleClick);

@@ -10,6 +10,7 @@ export async function getStaticProps() {
   );
   const heroData = await heroResponse.json();
   const hero = heroData.data.map((hero) => ({
+    id: hero.id,
     heading: hero.attributes.title,
     body: hero.attributes.description,
     image: `${process.env.BACKEND_URL}${hero.attributes.image.data.attributes.url}`,

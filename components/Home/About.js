@@ -4,7 +4,7 @@ import AboutContext from "../../context/AboutContext";
 
 export default function About() {
   const { aboutData } = useContext(AboutContext);
-  console.log(aboutData.images[1]);
+
   return (
     <section className="h-[900px] md:h-[250px] w-full flex flex-col md:flex-row overflow-hidden">
       {aboutData.images[0] && (
