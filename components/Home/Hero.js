@@ -12,11 +12,9 @@ export default function Hero() {
       <section className="p-10 md:px-[80px] md:py-0 flex justify-center items-center md:flex-1">
         <div>
           <h1 className="text-[28px] leading-[1] font-bold tracking-tighter mb-5">
-            {heroData[heroId]?.attributes?.title}
+            {heroData[heroId].heading}
           </h1>
-          <p className="text-darkGray">
-            {heroData[heroId]?.attributes?.description}
-          </p>
+          <p className="text-darkGray">{heroData[heroId].body}</p>
           <button className="transition-opacity hover:opacity-50 uppercase font-semibold tracking-[10px] mt-5 md:mt-none flex items-center space-x-10">
             <p>Shop Now</p>
             <CgArrowLongRight className="text-xl" />

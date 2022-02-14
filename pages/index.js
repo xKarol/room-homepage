@@ -5,8 +5,16 @@ export default function HomePage({ data }) {
 }
 
 export async function getStaticProps() {
-  const heroResponse = await fetch(`${process.env.BACKEND_URL}/api/heroes`);
+  const heroResponse = await fetch(
+    `${process.env.BACKEND_URL}/api/heroes?populate=image`
+  );
   const heroData = await heroResponse.json();
+  const hero = heroData.data.map((hero) => ({
+    heading: hero.attributes.title,
+    body: hero.attributes.description,
+    image: `${process.env.BACKEND_URL}${hero.attributes.image.data.attributes.url}`,
+  }));
+
   const aboutResponse = await fetch(
     `${process.env.BACKEND_URL}/api/about?populate=images`
   );
@@ -21,7 +29,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: { heroData: heroData.data, aboutData: about },
+      data: { heroData: hero, aboutData: about },
     },
   };
 }
