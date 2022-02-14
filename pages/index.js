@@ -23,7 +23,7 @@ export default function HomePage({ heroData, aboutData }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const heroResponse = await fetch("http://localhost:1337/api/heroes");
   const heroData = await heroResponse.json();
   const aboutResponse = await fetch("http://localhost:1337/api/abouts/1");
